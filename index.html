@@ -17,7 +17,7 @@
 <body>
 
 
-   <div class="container">
+  <div class="container">
 
 
 
@@ -30,21 +30,26 @@
           <h1 id="weather" class="lead"></h1>
         </div>
       </div>
-  
 
-  
+      <form class="col-md-6 m-auto py-5">
+        <div class="input-group mb-3">
+          <input id="input-location" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+          <div class="input-group-append">
+            <button id="search-btn" type="button" class="btn btn-danger">Search</button>
+          </div>
+        </div>
+      </form>
+
       <div class="mt-5">
         <div class="weather-status text-white text-end">
           <div>
             <h6>Humidity</h6>
             <h2 id="humidity"></h2>
           </div>
-
           <div>
             <h6>Air Pressure</h6>
             <h2 id="pressure"></h2>
           </div>
-
           <div>
             <h6>Wind speed</h6>
             <h2 id="wind"></h2>
@@ -55,14 +60,7 @@
     </div>
 
 
-    <form class="col-md-6 m-auto py-5">
-      <div class="input-group mb-3">
-          <input id="input-location" type="text" class="form-control" placeholder="Enter a location for Weather ...">
-          <div class="input-group-append">
-              <button id="search-btn" type="button" class="btn btn-danger">Search</button>
-          </div>
-      </div>
-  </form>
+
 
     <div #swiperRef="" class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -73,7 +71,7 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-   </div>
+  </div>
 
 
 
