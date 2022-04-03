@@ -35,10 +35,21 @@ const loadData = () => {
         .then(res => res.json())
         .then(data => {
 
-            console.log(data.list)
+            // console.log(data.list)
 
             var listItems = data.list.map(function (item) {
-                return `<div class="swiper-slide">${item.main.temp}</div>`;
+                let temperature = item.main.temp;
+                const time = ((item.dt_txt).slice(11, -3));
+                const date = ((item.dt_txt).slice(0,10));
+                console.log(date);
+
+                temperature = Math.round(temperature)
+                console.log(item);
+                return `<div class="swiper-slide">
+                <div class="d-flex justify-content-between"><h6>${date}</h6>
+                <h6>${time}</h6></div>
+                <h4>${temperature-273}&deg;C</h4>
+                </div>`;
             })
             //   document.querySelector('.swiper-wrapper').innerHTML = listItems;
             document.querySelector('.swiper-wrapper').innerHTML = listItems.join('');
