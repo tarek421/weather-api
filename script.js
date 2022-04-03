@@ -1,4 +1,8 @@
-
+document.getElementById('search-btn').addEventListener('click', () => {
+    const inputLocation = document.getElementById('input-location').value;
+    loadData(inputLocation);
+    weatherUpdate(inputLocation);
+})
 
 
 function weatherUpdate(city) {
@@ -35,8 +39,8 @@ weatherUpdate('Dhaka');
 
 
 
-const loadData = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=dhaka&appid=32ba0bfed592484379e51106cef3f204`)
+const loadData = (city) => {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=32ba0bfed592484379e51106cef3f204`)
         .then(res => res.json())
         .then(data => {
 
@@ -60,7 +64,7 @@ const loadData = () => {
         })
 }
 
-loadData();
+loadData('Dhaka');
 
 
 

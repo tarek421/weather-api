@@ -1,11 +1,18 @@
 body {
+  background:url(images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
     margin: 0;
     padding: 0;
     position: relative;
-    height: 100%;
   }
 
   .swiper {
@@ -13,13 +20,11 @@ body {
     height: 100%;
     margin: 20px auto;
     margin-top: 220px;
+    background:#000000b0;
   }
 
-  /* .swiper-wrapper{
-    transition-duration: 300ms;
-    transform: translate3d(-93.3333px, 0px, 0px);
-  } */
 
+  
 
   .swiper-slide {
     text-align: center;
