@@ -1,26 +1,22 @@
 body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-
-  body {
-    background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
     margin: 0;
     padding: 0;
-
+    position: relative;
+    height: 100%;
   }
 
   .swiper {
     width: 100%;
     height: 100%;
     margin: 20px auto;
-    /* transition-duration: 0ms;
-    transform: translate3d(0px) !important; */
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
   }
+
 
   .swiper-slide {
     text-align: center;
