@@ -26,19 +26,6 @@ function weatherUpdate(city) {
 weatherUpdate('Dhaka');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const loadData = (city) => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=32ba0bfed592484379e51106cef3f204`)
         .then(res => res.json())
