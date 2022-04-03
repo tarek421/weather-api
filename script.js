@@ -1,4 +1,4 @@
-document.getElementById('search-btn').addEventListener('click', () => {
+document.querySelector('#search-btn').addEventListener('click', () => {
     const inputLocation = document.getElementById('input-location').value;
     loadData(inputLocation);
     weatherUpdate(inputLocation);
