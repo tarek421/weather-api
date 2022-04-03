@@ -53,8 +53,8 @@ loadData();
 // for slider
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 6,
-    centeredSlides: true,
-    spaceBetween: 10,
+    centeredSlides: false,
+    spaceBetween: 5,
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
