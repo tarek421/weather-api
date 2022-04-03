@@ -10,6 +10,11 @@ function weatherUpdate(city) {
             document.getElementById('location').innerText = data.name;
             document.getElementById('weather').innerText = data.weather[0].main;
             document.getElementById('image').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+
+            document.getElementById('humidity').innerText = data.main.humidity;
+            document.getElementById('pressure').innerText = data.main.pressure;
+            document.getElementById('wind').innerText = data.wind.speed;
         })
         .catch(error => console.log(error));
 }
@@ -35,7 +40,6 @@ const loadData = () => {
         .then(res => res.json())
         .then(data => {
 
-            // console.log(data.list)
 
             var listItems = data.list.map(function (item) {
                 let temperature = item.main.temp;
@@ -44,14 +48,13 @@ const loadData = () => {
                 console.log(date);
 
                 temperature = Math.round(temperature)
-                console.log(item);
                 return `<div class="swiper-slide">
                 <div class="d-flex justify-content-between"><h6>${date}</h6>
                 <h6>${time}</h6></div>
                 <h4>${temperature-273}&deg;C</h4>
                 </div>`;
             })
-            //   document.querySelector('.swiper-wrapper').innerHTML = listItems;
+              document.querySelector('.swiper-wrapper').innerHTML = listItems;
             document.querySelector('.swiper-wrapper').innerHTML = listItems.join('');
 
         })
